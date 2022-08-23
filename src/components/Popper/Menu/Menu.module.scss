@@ -1,0 +1,32 @@
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+//menu wrapper
+.menu-list{
+    width: 224px;
+    animation: fadeIn ease-in 0.15s;
+
+    .menu-item{
+        margin-left: 0;
+    }
+}
+.menu-popper{
+    padding-bottom: 8px;
+}
+
+//menu items
+.menu-item{
+    width: 100%;
+    text-align: left;
+    border-radius: 0;
+    padding: 11px 16px;
+
+    &:hover{
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
