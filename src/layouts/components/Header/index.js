@@ -10,13 +10,15 @@ import { faCircleQuestion,
     faSignOut, 
     faUser 
 } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+import Tippy from '@tippyjs/react';
 import styles from './Header.module.scss'
+import 'tippy.js/dist/tippy.css'; 
 
+import config from '~/config';
 import Button from '~/components/Button';
 import images from '~/assest/images';
-import Tippy from '@tippyjs/react';
 import Menu from '~/components/Popper/Menu';
-import 'tippy.js/dist/tippy.css'; 
 import { MailBoxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
@@ -39,7 +41,77 @@ const MENU_ITEMS = [
                     type: 'language',
                     code: 'vi',
                     title: 'Tiếng Việt',
-                }
+                },
+                {   
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {   
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {   
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {   
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {   
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {   
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {   
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {   
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {   
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {   
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {   
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {   
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {   
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {   
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
             ]
         }
     },
@@ -91,7 +163,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt="tiktok"/>
+                <Link className={cx('logo-link')} to={config.routes.home}>
+                    <img src={images.logo} alt="tiktok"/>
+                </Link>
                 <Search/>
 
                 <div className={cx('actions')}>
@@ -134,7 +208,7 @@ function Header() {
                                 src='https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/293647356_1242970689805876_2993293583672797237_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=0d1nWKA2R2gAX_khusd&_nc_ht=scontent.fdad3-5.fna&oh=00_AT_BQWZ7iJoAb75Bf29HR4y_zI2MCCnUA-WVQW2FeK6zNg&oe=630A1816'
                                 className={cx('user-avatar')}
                                 alt="Cao Ái Linh"
-                                fallback="https://static.fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"
+                                // fallback="https://static.fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
