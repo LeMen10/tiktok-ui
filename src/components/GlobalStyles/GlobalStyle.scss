@@ -72,6 +72,11 @@ a{
     src: url('/assest/fonts/Proxima-Nova-Semibold.woff2');
     font-weight: 700;
 }
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assest/fonts/Proxima-Nova-Semibold.woff2');
+    font-weight: 900;
+}
 body{
     .tippy-box{
         text-decoration: none;
