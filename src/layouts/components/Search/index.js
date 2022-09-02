@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faCircleNotch, faCircleXmark} from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames/bind';
 import HeadlessTippy from '@tippyjs/react/headless';
 
@@ -95,7 +95,7 @@ function Search() {
                             <FontAwesomeIcon icon={faCircleXmark}/>
                         </button>
                     )}
-                    {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner}/>}
+                    {loading && <FontAwesomeIcon className={cx('loading')} icon={faCircleNotch}/>}
                         
                     <button className={cx('search-btn')} onMouseDown={e=>e.preventDefault()}>
                         <SearchIcon />

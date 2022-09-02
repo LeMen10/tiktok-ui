@@ -22,6 +22,8 @@ import Menu from '~/components/Popper/Menu';
 import { MailBoxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
+// import Modal from '~/components/Modal';
+// import { useState } from 'react';
 
 const cx = classNames.bind(styles)
 const MENU_ITEMS = [
@@ -32,66 +34,6 @@ const MENU_ITEMS = [
         children: {
             title: 'Language',
             data: [
-                {   
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {   
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
-                {   
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {   
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
-                {   
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {   
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
-                {   
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {   
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
-                {   
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {   
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
-                {   
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {   
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
                 {   
                     type: 'language',
                     code: 'en',
@@ -126,7 +68,8 @@ const MENU_ITEMS = [
     }
 ]
 function Header() {
-    
+    //modal
+    // const [modalIsOpen, setIsOpen] = useState(false);
     //handle logic
     const handleMenuChange = (menuItem) => {
         switch(menuItem.type){
@@ -135,7 +78,7 @@ function Header() {
             default:
         }
     };
-    const currentUser = true;
+    const currentUser = false;
     const userItem = [
         {
             icon: <FontAwesomeIcon icon={faUser}/>,
@@ -160,6 +103,14 @@ function Header() {
             separate: true,
         },
     ]
+    
+    //modal
+    // function openModal() {
+    //     setIsOpen(true);
+    // }
+    // function closeModal() {
+    //     setIsOpen(false);
+    // }
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -205,9 +156,9 @@ function Header() {
                     <Menu items={currentUser ? userItem : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
                             <Image 
-                                src='https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/293647356_1242970689805876_2993293583672797237_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=0d1nWKA2R2gAX_khusd&_nc_ht=scontent.fdad3-5.fna&oh=00_AT_BQWZ7iJoAb75Bf29HR4y_zI2MCCnUA-WVQW2FeK6zNg&oe=630A1816'
+                                src='https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/806989714f01200c57ecb64a5df98596~c5_100x100.jpeg?x-expires=1662087600&x-signature=3ANrTbXSYvwHfwJMBseb8%2Fnb2vk%3D'
                                 className={cx('user-avatar')}
-                                alt="Cao Ái Linh"
+                                alt="Võ Lê Mến"
                                 // fallback="https://static.fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"
                             />
                         ) : (
@@ -219,6 +170,21 @@ function Header() {
                 </div>
 
             </div>
+
+        {/* <button onClick={openModal}>Open Modal</button>
+        <Modal
+            isOpen={modalIsOpen}
+        >
+            <button onClick={closeModal}>close</button>
+            <div>I am a modal</div>
+            <form>
+                <input />
+                <button>tab navigation</button>
+                <button>stays</button>
+                <button>inside</button>
+                <button>the modal</button>
+            </form>
+        </Modal> */}
         </header>
     );
 }

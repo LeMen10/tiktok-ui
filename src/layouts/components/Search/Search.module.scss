@@ -52,11 +52,11 @@
     color: rgba(22, 24, 35, 0.34);
 }
 .loading{
-    animation: spiner 1s linear infinite;
+    animation: spiner 2s linear infinite;
 }
 @keyframes spiner {
     from{
-        transform: translateY(-50%) rotate(0);
+        transform: translateY(-50%) rotate(90deg);
     }
     to{
         transform: translateY(-50%) rotate(360deg);
